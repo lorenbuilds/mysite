@@ -1,0 +1,78 @@
+/* Code Box Styles */
+.frame-1 {
+  width: 652px;
+  height: auto;
+  background-color: #272823;
+  padding: 7px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.frame-4 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.code-text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  white-space: pre-wrap;
+  width: calc(100% - 80px);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+.copy-button {
+  width: 60px;
+  height: 38px;
+  background-color: #e0dfd8;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: rgb(200, 199, 192);
+}
+
+.copy-text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: rgb(37, 4, 4);
+  letter-spacing: -0.4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .frame-1 {
+    width: 100%;
+  }
+
+  .frame-4 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .code-text {
+    width: 100%;
+  }
+
+  .copy-button {
+    align-self: flex-end;
+  }
+}
