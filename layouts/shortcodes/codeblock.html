@@ -1,0 +1,5 @@
+<div class="code-block">
+  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  {{ $lang := .Get 0 }} {{ highlight .Inner $lang "linenos=false" }}
+</div>
+<script src="/js/copy-code.js"></script>

@@ -1,0 +1,94 @@
+.code-block {
+  position: relative;
+  margin: 1rem 0;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.code-block pre {
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* Style for code blocks */
+.code-container {
+  width: 100%;
+  background-color: rgb(39, 40, 35);
+  padding: 7px 17px;
+  margin: 1.5em 0;
+  border-radius: 8px;
+}
+
+/* Inner frame for code and button */
+.code-frame {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+/* Code block styling */
+.code-frame pre {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  background: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Copy button styling */
+.copy-button {
+  width: 60px;
+  height: 38px;
+  background-color: rgb(224, 223, 216);
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: rgb(37, 4, 4);
+  letter-spacing: -0.4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background-color: rgb(200, 199, 192);
+}
+
+/* Animation for copy feedback */
+@keyframes copyFeedback {
+  0% {
+    background: #27ae60;
+  }
+  100% {
+    background: #2c3e50;
+  }
+}
+
+.copy-button.copied {
+  animation: copyFeedback 1s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .code-container {
+    width: 100%;
+  }
+
+  .code-frame {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .copy-button {
+    align-self: flex-end;
+  }
+}
