@@ -2,7 +2,7 @@
 title: "How to Create Bundles in Shopify Without APP "
 description: "This is a shopify tutorial on how to make a bundle Without APP."
 date: 2025-02-01
-tldr: "This tutorial is on how to create product bundles on Shopify without using an app. It walks you through the process of manually setting up bundles by editing product templates and using Shopify’s built-in features. Key steps include creating custom product options, setting bundle prices, and organizing products to appear as a bundle on your store."
+tldr: "This tutorial is on how to create product bundles on Shopify without using an app. Key steps include creating custom product options, setting bundle prices, and organizing products to appear as a bundle on your store."
 draft: false
 toc: true
 ---
