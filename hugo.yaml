@@ -7,8 +7,6 @@ theme: "archie"
 pygmentsCodeFences: true
 pygmentsUseClasses: true
 
-# Menu items
-
 # Theme parameters
 params:
   useCDN: false
