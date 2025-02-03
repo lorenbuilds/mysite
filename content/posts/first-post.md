@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "How to Create Bundles in Shopify Without APP"
 date: 2024-02-01
 draft: false
 toc: false
