@@ -10,4 +10,4 @@ pygmentsUseClasses: true
 # Theme parameters
 params:
   useCDN: false
-  customcss: ["css/code.css"]
+  customcss: ["css/code.css", "css/override.css"]
