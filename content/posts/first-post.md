@@ -3,7 +3,7 @@ title: "How to Create Bundles in Shopify Without APP"
 date: 2024-02-01
 draft: false
 toc: false
-description: "A brief description of what this post is about. This will appear in the list view."
+description: "A tutorial on how to create bundles in shopify without using apps."
 ---
 
 ## Create a snippet called bulk-add-to-cart-buttons
