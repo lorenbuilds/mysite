@@ -116,7 +116,7 @@ new LogoScroll();
 
 ## Add Settings to the theme
 
-add this around line 635 
+add this around line 635
 
 {{< codebox >}}
 

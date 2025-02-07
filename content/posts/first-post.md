@@ -9,7 +9,12 @@ description: "A tutorial on how to create bundles in shopify without using apps.
 ## Create a snippet called bulk-add-to-cart-buttons
 
 {{< codebox >}}
-{% liquid%}
+
+{% comment %}
+Liquid Variables
+{% endcomment %}
+
+{% liquid
 assign block_title_text = block.settings.block-title-text
 assign block_title_color = block.settings.block-title-color
 assign block_divider_color = block.settings.block-divider-color
@@ -594,7 +599,7 @@ const config = {
 
 {{< /codebox >}}
 
-## Go into your main-product.liquid file and look for the following code
+## Go into your main-product.liquid file and search for when icon-with-text and paste this code
 
 {{< codebox >}}
 {% comment %}Start of Bulk Add to Cart Component{% endcomment %}
