@@ -9,7 +9,6 @@ description: "A tutorial on how to create bundles in shopify without using apps.
 ## Create a snippet called bulk-add-to-cart-buttons
 
 {{< codebox >}}
-
 {% comment %}
 Liquid Variables
 {% endcomment %}
@@ -217,7 +216,7 @@ assign button_border_radius = block.settings.button-border-radius | append: 'px'
             <div class="radio-circle"></div>
             <div class="option-info">
                 <div class="option-title"><slot name="btn_text"></slot></div>
-                <div class="option-save">You Save 40%</div>
+                <div class="option-save"><slot name="save_text">You Save 0%</slot></div>
             </div>
         </div>
         <div class="option-price">
@@ -449,6 +448,26 @@ class BulkAddToCart extends HTMLElement {
     if (radioDotColor) {
         this.shadowDom.host.style.setProperty('--radio-dot-color', radioDotColor);
     }
+
+    // Extract discount from button text and update save text
+    const btnTextSlot = this.shadowDom.querySelector('slot[name="btn_text"]');
+    btnTextSlot.addEventListener('slotchange', () => {
+        const btnText = btnTextSlot.assignedNodes()[0].textContent;
+        const discountMatch = btnText.match(/(\d+)%\s+[Oo]ff/);
+        const discount = discountMatch ? discountMatch[1] : '0';
+        
+        // Create and update the save text slot content
+        const saveTextSpan = document.createElement('span');
+        saveTextSpan.slot = 'save_text';
+        saveTextSpan.textContent = `You Save ${discount}%`;
+        
+        // Replace existing save text slot content
+        const oldSaveText = this.querySelector('[slot="save_text"]');
+        if (oldSaveText) {
+            oldSaveText.remove();
+        }
+        this.appendChild(saveTextSpan);
+    });
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -556,6 +575,7 @@ const config = {
                 radio-border-color="{{ radio_border_color }}"
                 radio-dot-color="{{ radio_dot_color }}">
                 <span style="color: {{ btn_one_text_color }};" slot="btn_text">{{ btn_one_text }}</span>
+                <span slot="save_text">You Save 0%</span>
             </bulk-add-to-cart>
         </div>
     {% endif %}
@@ -596,7 +616,6 @@ const config = {
     {% endif %}
 
 </div>
-
 {{< /codebox >}}
 
 ## Go into your main-product.liquid file and search for when icon-with-text and paste this code
